@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { BasePageComponent } from './partials/base-page/base-page.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     ProductsComponent,
     ServicesComponent,
     ContactComponent,
+    BasePageComponent,
     
   ],
   imports: [
