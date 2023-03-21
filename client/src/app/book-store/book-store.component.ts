@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import {Book} from '../model/book.model';
 import { BookRepository } from './../model/book.repository';
 
@@ -10,11 +10,6 @@ import { BookRepository } from './../model/book.repository';
 })
 export class BookStoreComponent {
   constructor(private respository: BookRepository) {
-
-  }
-
-  ngOnInit(): void{
-
   }
 
   get books(): Book[]{

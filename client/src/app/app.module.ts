@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BookStoreModule} from './book-store/book-store.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { BasePageComponent } from './partials/base-page/base-page.component';
-import { BookStoreComponent } from './book-store/book-store.component';
+
 
 
 
@@ -26,13 +27,14 @@ import { BookStoreComponent } from './book-store/book-store.component';
     ServicesComponent,
     ContactComponent,
     BasePageComponent,
-    BookStoreComponent,
+    
     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BookStoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
