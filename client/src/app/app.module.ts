@@ -11,6 +11,8 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { BasePageComponent } from './partials/base-page/base-page.component';
+import { BookStoreComponent } from './book-store/book-store.component';
+
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { BasePageComponent } from './partials/base-page/base-page.component';
     ServicesComponent,
     ContactComponent,
     BasePageComponent,
+    BookStoreComponent,
+    
     
   ],
   imports: [
