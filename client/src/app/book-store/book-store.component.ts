@@ -9,14 +9,50 @@ import { BookRepository } from './../model/book.repository';
   styleUrls: ['./book-store.component.css']
 })
 export class BookStoreComponent {
+  public selectedAuthor = null;
+  public booksPerPage = 4;
+  public selectedPage = 1;
+
   constructor(private respository: BookRepository) {
   }
 
   get books(): Book[]{
-    return this.respository.getBooks();
+    const pageIndex = (this.selectedPage - 1) * this.booksPerPage;
+    return this.respository.getBooks(this.selectedAuthor)
+    .slice(pageIndex, pageIndex + this.booksPerPage);
   }
 
   get authors(): string[]{
     return this.respository.getAuthors();
   }
+
+  changeAuthor(newAuthor?: string): void
+  {
+    this.selectedAuthor = newAuthor;
+  }
+
+  changePage(newPage: number): void
+  {
+    this.selectedPage = newPage;
+  }
+
+  changePageSize(newSize: number): void
+  {
+    this.booksPerPage = Number(newSize);
+    this.changePage(1);
+  }
+
+  // get pageCount(): number
+  // {
+  //   return Math.ceil(this.repository
+  //     .getBooks(this.selectedAuthor).length / this.booksPerPage);
+  // }
+
+  get pageNumbers(): number[] {
+    return Array(Math.ceil(this.respository.
+      getBooks(this.selectedAuthor).length / this.booksPerPage))
+      .fill(0).map((x,i) => i + 1);
+  }
 }
+
+
