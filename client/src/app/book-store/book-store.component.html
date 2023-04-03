@@ -21,6 +21,9 @@
         </h4>
         <div class="card-text bg-white p-1">
           {{ book.description }}
+          <button class="btn btn-success btn-sm float-right" (click)='addBookToCart(book)'>
+            Add To Cart
+          </button>
         </div>
       </div>
 

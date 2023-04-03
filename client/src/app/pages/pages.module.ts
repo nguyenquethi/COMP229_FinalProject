@@ -10,7 +10,7 @@ import { PartialsModule } from '../partials/partials.module';
 
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, PartialsModule],
   declarations: [
     AboutComponent,
     ContactComponent,
